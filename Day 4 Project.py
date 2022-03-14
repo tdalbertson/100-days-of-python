@@ -1,3 +1,4 @@
+from ast import Continue, Pass
 import random
 
 rock = '''
@@ -56,6 +57,7 @@ while you_win == False: # Play until user wins
         computer_choice = scissors
     else: #Error message
         print("Something went wrong!")
+        continue
 
     ## Get user choice
     user_choice = int(input('What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. '))
@@ -68,6 +70,7 @@ while you_win == False: # Play until user wins
         user_choice = scissors
     else: # Error message
         print("Something went wrong!")
+        continue
 
     ## Compare choices (user to computer)
     # Reset you_win for comparison
@@ -88,7 +91,7 @@ while you_win == False: # Play until user wins
         you_win = True
         
     # Print results
-    print(user_choice + '\n')
+    print(f'{user_choice}\'\n\'')
     print(f'Computer chose:\n{computer_choice}\n')
     
     if you_tie == True:
